@@ -23,14 +23,14 @@ spec:
       restartPolicy: Always
       containers:
       - name: custom-grafana
-        image: winds6206/custom-grafana:8.3.1
+        image: winds6206/custom-grafana:9.5.14
         ports:
-          - containerPort: 80
+          - containerPort: 3000
         env:
           - name: TZ
             value: Asia/Taipei
           - name: GF_SERVER_HTTP_PORT
-            value: "80"
+            value: "3000"
       securityContext:
         fsGroup: 472
         runAsUser: 472

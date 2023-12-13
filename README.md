@@ -1,7 +1,8 @@
 # custom-grafana 映像檔
 
 - 已安裝 tzdata 套件，帶入環境變數 `TZ=Asia/Taipei` 可修正時區。
-- 修正原生 3000 port，調整為 80 port
+- `8.3.1` 可以使用 1024 以下 port
+- `9.5.14` 請使用 3000 port
 
 ## 使用方式
 
@@ -24,10 +25,10 @@ spec:
             - name: TZ
               value: Asia/Taipei
             - name: GF_SERVER_HTTP_PORT
-              value: "80"
+              value: "3000"
 ```
 
-應用程式的 port，指定為80
+應用程式的 port，指定為3000
 
 ```
 apiVersion: apps/v1
@@ -43,6 +44,6 @@ spec:
       containers:
       ...
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         ...
 ```
