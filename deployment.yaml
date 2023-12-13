@@ -23,7 +23,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: custom-grafana
-        image: winds6206/custom-grafana:9.5.14
+        image: winds6206/custom-grafana:10.2.2
         ports:
           - containerPort: 3000
         env:
